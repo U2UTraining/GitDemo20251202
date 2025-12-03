@@ -50,7 +50,7 @@ resource webSiteName_resource 'Microsoft.Web/sites@2022-03-01' = {
     vnetContentShareEnabled: false
     siteConfig: {
       numberOfWorkers: 1
-      linuxFxVersion: 'DOTNETCORE|6.0'
+      linuxFxVersion: 'DOTNETCORE|10.0'
       acrUseManagedIdentityCreds: false
       alwaysOn: false
       http20Enabled: false
@@ -106,7 +106,7 @@ resource webSiteName_web 'Microsoft.Web/sites/config@2022-03-01' = {
       'hostingstart.html'
     ]
     netFrameworkVersion: 'v4.0'
-    linuxFxVersion: 'DOTNETCORE|6.0'
+    linuxFxVersion: 'DOTNETCORE|10.0'
     requestTracingEnabled: false
     remoteDebuggingEnabled: false
     remoteDebuggingVersion: 'VS2019'
