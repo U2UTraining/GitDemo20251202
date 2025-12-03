@@ -27,7 +27,7 @@ jobs:
     - name: Build Project
       run: dotnet build --no-restore --configuration ${{ env.configuration }}
     - name: Publish
-      run: dotnet publish --configuration ${{ env.configuration }} --output ${{ runner.temp }}
+      run: dotnet publish .\WebApplication1 --configuration ${{ env.configuration }} --output ${{ runner.temp }}
     - name: Upload publish artifact
       uses: actions/upload-artifact@v4.0.0
       with:
