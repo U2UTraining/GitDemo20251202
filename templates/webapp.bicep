@@ -109,7 +109,7 @@ resource webSiteName_web 'Microsoft.Web/sites/config@2022-03-01' = {
     linuxFxVersion: 'DOTNETCORE|10.0'
     requestTracingEnabled: false
     remoteDebuggingEnabled: false
-    remoteDebuggingVersion: 'VS2019'
+    remoteDebuggingVersion: 'VS2022'
     httpLoggingEnabled: false
     acrUseManagedIdentityCreds: false
     logsDirectorySizeLimit: 35
