@@ -21,6 +21,21 @@ jobs:
       configuration: release
     steps:
     - name: Checkout Sources
-      uses: actions/checkout@v2
+      uses: actions/checkout@v6
+    - name: Restore NuGet Package
+      run: dotnet restore
+    - name: Build Project
+      run: dotnet build --no-restore --configuration ${{ env.configuration }}
+    - name: Publish
+      run: dotnet publish --configuration ${{ env.configuration }} --output ${{ runner.temp }}
+    - name: Upload publish artifact
+      uses: action/upload-artifact@v3.0.0
+      with:
+        name: publish_artifact
+        path: ${{ runner.temp }}/publish
+        retention-days: 30
+        
+
+          
       
     
