@@ -120,7 +120,7 @@ jobs:
       - name: Deploy Web Publish Artifact
         uses: actions/download-artifact@v4
         with:
-          name: templates_artifact
+          name: publish_artifact
           path: ${{ runner.temp }}/publish
       - name: Deploy Azure WebApp
         uses: Azure/webapps-deploy@v2
