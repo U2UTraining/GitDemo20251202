@@ -85,7 +85,7 @@ jobs:
           name: templates_artifact
           path: ${{ runner.temp }}/publish
       - name: Deploy Azure WebApp
-        uses: Azure/webapp-deploy@v2
+        uses: Azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           package: ${{ runner.temp }}/publish
