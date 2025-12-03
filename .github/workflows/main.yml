@@ -1,0 +1,26 @@
+name: CI-CD
+
+on: 
+  push:
+    branches: 
+    - main
+  pull_request:
+    branches: 
+    - main
+  workflow_dispatch:
+
+env:
+  AZURE_RG: rg-peterdemo20251203
+  AZURE_SUBSCRIPTION: cd8acfc4-baea-4c96-8ae2-f6b5fc55eda8
+  AZURE_LOCATION: swedencentral
+
+jobs:
+  Build-Job:
+    runs-on: ubuntu-latest
+    env:
+      configuration: release
+    steps:
+    - name: Checkout Sources
+      uses: actions/checkout@v2
+      
+    
